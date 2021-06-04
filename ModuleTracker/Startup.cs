@@ -32,7 +32,7 @@ namespace ModuleTracker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Context>(opt => opt.UseSqlServer(Configuration.GetConnectionString("localSqlServer")));   //"Inject the repository (Database) here.
+            services.AddDbContext<Context>(opt => opt.UseSqlServer(Configuration.GetConnectionString("localSqlServer")));   //"Inject the repository's context here.
 
             //Adds controllers to the services collection. Controllers are the classes that contain the actual HTTP methods that your front-end(s) will call.
             services.AddControllers().AddNewtonsoftJson(s =>
