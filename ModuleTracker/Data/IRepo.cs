@@ -13,8 +13,9 @@ namespace ModuleTracker.Data
     {
         bool SaveChanges();
         IEnumerable<Student> GetAllStudents();
-        Student GetStudentById(int id);
         IEnumerable<Module> GetAllModules();
+        IEnumerable<Module> GetAllDependencies(int moduleId);
+        Student GetStudentById(int id);
         Module GetModuleById(int id);
         void CreateStudent(Student stud);
         void DeleteStudent(int id);

@@ -18,6 +18,11 @@ namespace ModuleTracker.Data
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Module> GetAllDependencies(int moduleId)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Module> GetAllModules()
         {
             throw new NotImplementedException();
