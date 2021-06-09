@@ -85,5 +85,20 @@ namespace ModuleTracker.Data
         {
             throw new NotImplementedException();
         }
+
+        public void DeleteStudent(Student student)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateModule(Module module)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteModule(Module module)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

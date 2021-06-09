@@ -8,14 +8,47 @@ namespace ModuleTracker.Data
 {
     public class SqlServerRepo : IRepo
     {
-        public void CreateStudent(Student stud)
+        private readonly Context _context;
+
+        public SqlServerRepo(Context context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public void DeleteStudent(int id)
+        public void CreateModule(Module module)
         {
-            throw new NotImplementedException();
+            if (module == null)
+            {
+                throw new ArgumentNullException(nameof(module));
+            }
+            _context.Module.Add(module);
+        }
+
+        public void CreateStudent(Student stud)
+        {
+            if (stud == null)
+            {
+                throw new ArgumentNullException(nameof(stud));
+            }
+            _context.Student.Add(stud);
+        }
+
+        public void DeleteModule(Module module)
+        {
+            if (module == null)
+            {
+                throw new ArgumentNullException(nameof(module));
+            }
+            _context.Module.Remove(module);
+        }
+
+        public void DeleteStudent(Student stud)
+        {
+            if (stud == null)
+            {
+                throw new ArgumentNullException(nameof(stud));
+            }
+            _context.Student.Remove(stud);
         }
 
         public IEnumerable<Module> GetAllDependencies(int moduleId)
@@ -25,27 +58,27 @@ namespace ModuleTracker.Data
 
         public IEnumerable<Module> GetAllModules()
         {
-            throw new NotImplementedException();
+            return _context.Module.ToList();
         }
 
         public IEnumerable<Student> GetAllStudents()
         {
-            throw new NotImplementedException();
+            return _context.Student.ToList();
         }
 
         public Module GetModuleById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Module.FirstOrDefault(p => p.ModuleID == id);
         }
 
         public Student GetStudentById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Student.FirstOrDefault(p => p.StudentID == id);
         }
 
         public bool SaveChanges()
         {
-            throw new NotImplementedException();
+            return (_context.SaveChanges() >= 0);
         }
     }
 }

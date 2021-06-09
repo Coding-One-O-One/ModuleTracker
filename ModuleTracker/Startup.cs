@@ -40,7 +40,9 @@ namespace ModuleTracker
                 s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());    //Automapper is a library Maps objects to each other using reflection.
-            services.AddScoped<IRepo, MockRepo>();  //Here we "inject" the implementation of whatever repo we want to use.
+            //services.AddScoped<IRepo, MockRepo>();  //Here we "inject" the implementation of whatever repo we want to use.
+            services.AddScoped<IRepo, SqlServerRepo>();
+
             //Swagger generator, for swagger documentation of our HTTP endpoints in our controller.
             services.AddSwaggerGen(c =>
             {

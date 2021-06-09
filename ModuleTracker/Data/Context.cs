@@ -17,7 +17,8 @@ namespace ModuleTracker.Data
 
         }
 
-        //Representation of Student model in database, as a DbSet
+        //Representation of models in database, as DbSets
         public DbSet<Student> Student { get; set; }
+        public DbSet<Module> Module{ get; set; }
     }
 }

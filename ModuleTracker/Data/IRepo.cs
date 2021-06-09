@@ -18,6 +18,8 @@ namespace ModuleTracker.Data
         Student GetStudentById(int id);
         Module GetModuleById(int id);
         void CreateStudent(Student stud);
-        void DeleteStudent(int id);
+        void DeleteStudent(Student student);
+        void CreateModule(Module module);
+        void DeleteModule(Module module);
     }
 }
