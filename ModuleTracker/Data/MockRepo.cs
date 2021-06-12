@@ -63,7 +63,7 @@ namespace ModuleTracker.Data
 
         public Module GetModuleById(int id)
         {
-            List<Module> modules = new List<Module>
+            List<Module> modules = new()
             {
                 new Module { ModuleID = 0, Code = "MAT1503", FullName = "Linear Algebra 1" }
             };
@@ -73,7 +73,7 @@ namespace ModuleTracker.Data
 
         public Student GetStudentById(int id)
         {
-            List<Student> students = new List<Student>
+            List<Student> students = new()
             {
                 new Student { StudentID = 0, FullName = "Divan van Zyl" }
             };
@@ -97,6 +97,31 @@ namespace ModuleTracker.Data
         }
 
         public void DeleteModule(Module module)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Module> GetModulesForCourse(int courseId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Module> GetDependancyModulesForModule(int moduleId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public University GetUniversityForStudent(int studentId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateUniversity(University university)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteUniversity(University university)
         {
             throw new NotImplementedException();
         }

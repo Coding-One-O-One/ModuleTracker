@@ -17,9 +17,14 @@ namespace ModuleTracker.Data
         IEnumerable<Module> GetAllDependencies(int moduleId);
         Student GetStudentById(int id);
         Module GetModuleById(int id);
+        IEnumerable<Module> GetModulesForCourse(int courseId);
+        IEnumerable<Module> GetDependancyModulesForModule(int moduleId);
+        University GetUniversityForStudent(int studentId);
         void CreateStudent(Student stud);
         void DeleteStudent(Student student);
         void CreateModule(Module module);
         void DeleteModule(Module module);
+        void CreateUniversity(University university);
+        void DeleteUniversity(University university);
     }
 }

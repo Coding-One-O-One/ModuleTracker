@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModuleTracker.Dtos
 {
-    /// <summary>
-    /// DTOs are objects that carry data between processes.
-    /// </summary>
-    public class StudentCreateDto
+    public class StudentUpdateDto
     {
         [Required]
         [MaxLength(256)]

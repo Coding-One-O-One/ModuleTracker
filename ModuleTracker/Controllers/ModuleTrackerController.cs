@@ -30,8 +30,8 @@ namespace ModuleTracker.Controllers
 
         //Return a single student
         //[HttpGet] indicates that the method will repond to a GET verb
-        //GET api/ModuleTracker
-        [HttpGet("{id}", Name = "GetStudentById")]
+        //GET api/ModuleTracker/student/{id}
+        [HttpGet("student/{id}", Name = "GetStudentById")]
         public ActionResult <StudentReadDto> GetStudentById(int id)
         {
             var studentItem = _repository.GetStudentById(id);
@@ -40,6 +40,16 @@ namespace ModuleTracker.Controllers
                 return Ok(_mapper.Map<StudentReadDto>(studentItem));
             }
             return NotFound();
+        }
+
+        //Returns an actionresult as <IEnumerable> list of students
+        //[HttpGet] indicates that method will respond to a GET verb
+        //GET api/students
+        [HttpGet]
+        public ActionResult<IEnumerable<StudentReadDto>> GetAllStudents()
+        {
+            var items = _repository.GetAllStudents();
+            return Ok(_mapper.Map<IEnumerable<StudentReadDto>>(items));
         }
     }
 }

@@ -15,6 +15,8 @@ namespace ModuleTracker.Profiles
             //Source -> Destination
             CreateMap<StudentCreateDto, Student>();
             CreateMap<Student, StudentReadDto>();
+            CreateMap<StudentUpdateDto, Student>();
+            CreateMap<Student, StudentUpdateDto>();
         }
     }
 }

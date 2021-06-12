@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ModuleTracker.Dtos
+namespace ModuleTracker.Models
 {
-    /// <summary>
-    /// DTOs are objects that carry data between processes.
-    /// </summary>
-    public class StudentCreateDto
+    public class University
     {
+        [Required]
+        [Key]
+        public int UniversityID { get; set; }
         [Required]
         [MaxLength(256)]
         public string FullName { get; set; }
