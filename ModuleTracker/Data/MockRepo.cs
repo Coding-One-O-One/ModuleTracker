@@ -125,5 +125,30 @@ namespace ModuleTracker.Data
         {
             throw new NotImplementedException();
         }
+
+        public void CreateModuleDependency(ModuleDependency moduleDependency)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateModuleDependency(ModuleDependency moduleDependency)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteModuleDependency(ModuleDependency moduleDependency)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateStudent(Student stud)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateModule(Module module)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

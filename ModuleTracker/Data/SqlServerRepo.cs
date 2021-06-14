@@ -24,6 +24,11 @@ namespace ModuleTracker.Data
             _context.Module.Add(module);
         }
 
+        public void CreateModuleDependency(ModuleDependency moduleDependency)
+        {
+            throw new NotImplementedException();
+        }
+
         public void CreateStudent(Student stud)
         {
             if (stud == null)
@@ -45,6 +50,11 @@ namespace ModuleTracker.Data
                 throw new ArgumentNullException(nameof(module));
             }
             _context.Module.Remove(module);
+        }
+
+        public void DeleteModuleDependency(ModuleDependency moduleDependency)
+        {
+            throw new NotImplementedException();
         }
 
         public void DeleteStudent(Student stud)
@@ -104,6 +114,21 @@ namespace ModuleTracker.Data
         public bool SaveChanges()
         {
             return (_context.SaveChanges() >= 0);
+        }
+
+        public void UpdateModule(Module module)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateModuleDependency(ModuleDependency moduleDependency)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateStudent(Student stud)
+        {
+            //
         }
     }
 }
